@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeeb's Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#fff5f5,#f5fbff,#faf5ff);
+color:#222;
+overflow-x:hidden;
+}
+.bg{
+position:fixed;inset:0;z-index:-1;
+background:
+radial-gradient(circle at 10% 20%, rgba(255,80,80,.18), transparent 30%),
+radial-gradient(circle at 85% 15%, rgba(0,180,255,.18), transparent 30%),
+radial-gradient(circle at 50% 90%, rgba(140,80,255,.18), transparent 35%);
+}
+nav{
+position:sticky;top:0;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,.7);
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 8%;
+z-index:10;
+}
+.logo{font-size:2rem;font-weight:800}
+nav ul{display:flex;gap:24px;list-style:none}
+nav a{text-decoration:none;color:#333;font-weight:600}
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+}
+.profile{
+width:220px;height:220px;border-radius:50%;
+background:linear-gradient(135deg,#ff5f6d,#ffc371,#7b61ff,#00c2ff);
+padding:6px;
+animation:float 4s ease-in-out infinite;
+}
+.profile-inner{
+width:100%;height:100%;border-radius:50%;
+background:white;
+display:flex;align-items:center;justify-content:center;
+font-size:5rem;
+}
+@keyframes float{
+50%{transform:translateY(-12px)}
+}
+.hero h1{
+font-size:clamp(4rem,10vw,7rem);
+background:linear-gradient(90deg,#ff4d4d,#ff66cc,#8b5cf6,#00c2ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.hero p{font-size:1.3rem;margin-top:12px}
+.btn{
+display:inline-block;margin-top:25px;
+padding:14px 28px;border-radius:999px;
+text-decoration:none;color:white;font-weight:700;
+background:linear-gradient(90deg,#ff4d4d,#8b5cf6,#00c2ff);
+}
+.section{max-width:1100px;margin:auto;padding:80px 20px}
+.section h2{
+font-size:2.3rem;margin-bottom:25px;
+background:linear-gradient(90deg,#ff4d4d,#8b5cf6,#00c2ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.card{
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(10px);
+border-radius:24px;
+padding:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.sports{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+.sport{
+background:white;
+border-radius:24px;
+padding:28px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+.sport:hover{transform:translateY(-8px)}
+.icon{
+width:90px;height:90px;border-radius:24px;
+margin:0 auto 16px;
+display:flex;align-items:center;justify-content:center;
+font-size:2.5rem;color:white;
+}
+.basketball .icon{background:linear-gradient(135deg,#ff6b35,#ff3b3b)}
+.soccer .icon{background:linear-gradient(135deg,#6a5cff,#00c2ff)}
+.swim .icon{background:linear-gradient(135deg,#00c2ff,#00e5a8)}
+.goals li{margin:12px 0}
+.hidden{opacity:0;transform:translateY(50px);transition:.8s}
+.show{opacity:1;transform:none}
+footer{
+text-align:center;padding:50px 20px;color:#666
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<nav>
+<div class="logo">JEEB</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#sports">Sports</a></li>
+<li><a href="#food">Food</a></li>
+<li><a href="#goals">Goals</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="profile">
+<div class="profile-inner">J</div>
+</div>
+<h1 id="title">JEEB</h1>
+<p>Basketball • Soccer • Swim Team</p>
+<a href="#about" class="btn">Explore My Portfolio</a>
+</section>
+
+<section id="about" class="section hidden">
+<h2>About Me</h2>
+<div class="card">
+Hi! I'm Jeeb. I love sports, learning new things, hanging out with friends, and always trying to improve. This is my future portfolio website!
+</div>
+</section>
+
+<section id="sports" class="section hidden">
+<h2>My Sports</h2>
+<div class="sports">
+<div class="sport basketball">
+<div class="icon">◉</div>
+<h3>Basketball</h3>
+<p>I love the speed, teamwork, and excitement of the game.</p>
+</div>
+<div class="sport soccer">
+<div class="icon">⬢</div>
+<h3>Soccer</h3>
+<p>Scoring goals and working with my team is awesome.</p>
+</div>
+<div class="sport swim">
+<div class="icon">≈</div>
+<h3>Swim Team</h3>
+<p>I train hard and keep getting faster in the water.</p>
+</div>
+</div>
+</section>
+
+<section id="food" class="section hidden">
+<h2>Favorite Food</h2>
+<div class="card">
+<h3>Pancakes</h3>
+<p>My favorite food is pancakes, especially with lots of syrup!</p>
+</div>
+</section>
+
+<section id="goals" class="section hidden">
+<h2>Future Goals</h2>
+<div class="card">
+<ul class="goals">
+<li>Become even better at sports</li>
+<li>Learn awesome new skills</li>
+<li>Make my family proud</li>
+<li>Do great things in the future</li>
+</ul>
+</div>
+</section>
+
+<footer>
+Made by Jeeb 🌈
+</footer>
+
+<script>
+const hidden=document.querySelectorAll('.hidden');
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add('show');
+});
+});
+hidden.forEach(el=>obs.observe(el));
+
+const title=document.getElementById('title');
+window.addEventListener('scroll',()=>{
+title.style.transform=`translateY(${window.scrollY*0.2}px)`;
+});
+</script>
+</body>
+</html>
